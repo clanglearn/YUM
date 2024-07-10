@@ -17,7 +17,26 @@ C 프로그램 완성과정 : 프로그램 작성  > 컴파일 > **에러발생*
 1. sizeof()연산자 : 바이트 크기 확인 가능(비트>바이트)
 2. num ++(진행 후 증가) / ++num(증가 후 진행) / num--(진행 후 감소) / --num(감소 후 진행)
 3. 논리 연산자 > A&&B(A,B가 모두 참 > 참반환(AND)) / A||B(둘 중 하나라도 참 > 참 반환(OR) / !A(A가 참 > 거짓반환 , A가 거짓 > 참 반환(NOT))
-4. 
+4. 콤마 연산자(,) > 구분하는 연산자
+5. 비트 연산자 : &(AND), |(OR), ^(XOR), ~(비트반전), <<(비트 열 왼쪽으로 이동), >>(비트 열 오른쪽으로 이동)
 
+#C언어 문자와 상수 
+1. **int**(정수), **char**(문자용),**double**(실수, flaot와 유사(정밀도 차이))
+2. **아스키코드** : char ascii // **%c > 문자 출력** //**%d > 숫자 출력**
+3. **리터럴 상수** : print("%d", **2**) > 정수, 문자 > int // 실수 > double
+4. **심볼릭 상수** : **const int STUDENT_ID**(번수처럼 이름붙이기) **= 2343345** >> 변수가 상수임을 지정(대분자, 공백 구분 _ 사용)
+5. **형변환** : int num = 1; printf("%f", (double)num);(**명시적 형 변환**) // double num1 = 1; int num = 3.14; int num 3 = 129; char ch = num3;(**자동 형 변환)**
 
-
+#C언어 반복문과 조건문, 함수
+1.**while(조건) {}**
+2. **do {} while (조건);** >> 한번 실행 후 while 체크함
+3. **for(int num = 0 (시작); num < 5 (끝); num++(조건))**
+4. if (조건) else if(조건) else
+5. 삼항 연산자 : **(조건) ? data1: data2** >> 조건이 참이면 data1, 거짓이면 data2 반환 (= print(data1 if (조건) else data2))
+6. **switch(n) {case 1**(n = 1일때) **: print("a"); break; case2 : print("b"); break;** **default**(아무 조건에도 부합하지 않을 때) **: print("default");**
+7. 함수 : **int calculator(int num1);**(절차지향적이므로 원형 선언 후 시작)
+  **int main(void) { printf("%d\n", calculator(1)**(함수 호출))**; return 0;**
+  int calcaulator(int num) {return num;}
+8. **지역 변수** : 함수 내에서만 접근 가능(for, if 내에서 선언 된 함수 또한 마찬가지)
+9. **전역 변수** : 함수 외부에서 선언, int num;(0으로 자동 초기화)
+10. **재귀함수** : 함수 내에서 자기 자신 호출
