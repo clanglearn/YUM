@@ -49,11 +49,11 @@ printf("string: %s \n", str);
 
 #포인터와 함수
 1. 이자 전달의 기본 방식 : 복사
-2. C언어에서 매개변수로 배열 사용 불가 > 배열은 주소값을 전달하는 방식 사용
+2. C언어에서 매개변수로 배열 사용 불가 > 배열은 **주소값을 전달하는 방식** 사용
 3. 배열의 인자로 포인터 변수를 전달하면 배열처럼 사용 가능 > void Functinon(int *param(포인터변수를 인자로 전달)) {print ("%d\n", param[0](포인터로 사용가능));}
 4. void Functinon(int param[](배열임을 명확히 함)) {print ("%d\n", param[0]);}
-5. call-by-value : 함수 호출 시 단순히 값만 전달 (함수 외부에 선언된 변수에 접근 불가)
-6. call-by-reference : 메모리 접근에 사용되는 주소값 전달 (함수 외부에 선언된 변수에 접근 가능) >>> 함수의 인자로 전달되는 대상에 따라 구별가능
+5. **call-by-value** : 함수 호출 시 단순히 값만 전달 (함수 외부에 선언된 변수에 접근 불가)
+6. **call-by-reference** : 메모리 접근에 사용되는 주소값 전달 (함수 외부에 선언된 변수에 접근 가능) >>> 함수의 인자로 전달되는 대상에 따라 구별가능
 
 ```c
 #include <stdio.h>
@@ -67,7 +67,7 @@ void Swap(int *ptr1, int *ptr2){
 int main(void) {
    int num1 = 10, num2 = 20;
    printf("Before Swap : %d, %d\n" num1, num2);
-   Swap(**&**num1, **&**num2);
+   Swap(&num1, &num2);
    printf("After Swap : %d, %d\n", num1, num2);
    return0;
 }
